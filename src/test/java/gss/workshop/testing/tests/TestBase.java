@@ -3,6 +3,7 @@ package gss.workshop.testing.tests;
 import static io.restassured.RestAssured.baseURI;
 
 import gss.workshop.testing.utils.PropertyReader;
+import java.util.HashMap;
 
 public class TestBase {
 
@@ -10,6 +11,7 @@ public class TestBase {
   protected static String token;
   protected static String key;
   protected static String version;
+  protected HashMap<String, String> params = new HashMap<String, String>();
 
   public TestBase() {
     prop = PropertyReader.getInstance();
